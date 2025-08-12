@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>TaskMaster | Gestor de Tareas ES6</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+<main class="container">
+  <header class="app-header">
+    <h1><i class="fas fa-tasks"></i> TaskMaster</h1>
+    <p class="subtitle">Gestor avanzado de tareas con ES6</p>
+  </header>
+
+  <section class="task-creator">
+    <div class="input-group">
+      <input id="nombreInput" type="text" placeholder="Nueva tarea..." />
+      <select id="prioridadSelect">
+        <option value="">Normal</option>
+        <option value="alta">Alta prioridad</option>
+        <option value="media">Media prioridad</option>
+        <option value="baja">Baja prioridad</option>
+      </select>
+      <button id="agregarBtn" class="btn primary">
+        <i class="fas fa-plus"></i> Agregar
+      </button>
+    </div>
+  </section>
+
+  <section class="task-filters">
+    <button id="filterAll" class="btn filter active">Todas</button>
+    <button id="filterPending" class="btn filter"><i class="fas fa-clock"></i> Pendientes</button>
+    <button id="filterCompleted" class="btn filter"><i class="fas fa-check"></i> Completadas</button>
+  </section>
+
+  <section class="task-list">
+    <div id="taskContainer"></div>
+  </section>
+
+  <section class="task-stats">
+    <div class="stat-item">
+      <span class="stat-value" id="totalTasks">0</span>
+      <span class="stat-label">Total</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value" id="pendingTasks">0</span>
+      <span class="stat-label">Pendientes</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-value" id="completedTasks">0</span>
+      <span class="stat-label">Completadas</span>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Logo y derechos -->
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <i class="fas fa-tasks"></i>
+          <span class="brand-name">TaskMaster ES6</span>
+        </div>
+        <div class="copyright">
+          <small>© 2023 Todos los derechos reservados</small>
+        </div>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="footer-links">
+        <a href="https://inalaf.ca" target="_blank" class="footer-link" aria-label="Sitio web">
+          <i class="fas fa-globe"></i>
+          <span class="link-text">Web</span>
+        </a>
+        <a href="https://github.com/MagdaIG" target="_blank" class="footer-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+          <span class="link-text">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/minalaf/" target="_blank" class="footer-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+          <span class="link-text">LinkedIn</span>
+        </a>
+      </div>
+
+      <!-- Créditos -->
+      <div class="footer-credits">
+        <div class="credits-content">
+          <span class="credits-text">Desarrollado con <i class="fas fa-heart"></i> por</span>
+          <span class="developer-name">Magdalena Inalaf G.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>
